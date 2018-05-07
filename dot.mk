@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The DotOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,11 +20,11 @@ $(call inherit-product, device/samsung/j5y17lte/device.mk)
 # Inherit from those products. Most specific first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DotOS stuff
+$(call inherit-product, vendor/dot/config/common.mk)
 
 # Device identifier
-PRODUCT_NAME := lineage_j5y17lte
+PRODUCT_NAME := dot_j5y17lte
 PRODUCT_DEVICE := j5y17lte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
