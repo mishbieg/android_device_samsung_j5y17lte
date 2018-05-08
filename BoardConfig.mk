@@ -20,7 +20,6 @@ TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17lteub
 include device/samsung/exynos7870-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/samsung/j5y17lte
-TARGET_COPY_OUT_VENDOR := system/vendor
 
 # inherit the splitted configs
 -include $(LOCAL_PATH)/board/*.mk
