@@ -30,10 +30,6 @@ ro.ril.force_eri_from_xml=true
 # sdcardfs
 ro.sys.sdcardfs=false
 
-# Nfc
-ro.nfc.port=I2C
-ro.nfc.sec_hal=true
-
 # Wifi
 net.tethering.noprovisioning=true
 

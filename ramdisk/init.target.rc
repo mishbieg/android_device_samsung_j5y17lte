@@ -12,6 +12,17 @@ on post-fs
 
 on boot
 
+# NFC
+    mkdir /data/nfc 0700 nfc nfc
+    mkdir /data/nfc/param 0700 nfc nfc
+
+# Permissions for NFC
+    chmod 0660 /dev/sec-nfc
+    chown nfc nfc /dev/sec-nfc
+
+# EFS section for NFC Resonant Frequency
+    mkdir /efs/sec_efs/nfc 0700 nfc nfc
+
 # Audio I2C node for TFA amp
     chmod 0660 /dev/i2c-20
     chown audio audio /dev/i2c-20
@@ -289,23 +300,9 @@ on boot
 # NFC : Permissions for NFC
     chmod 0660 /dev/sec-nfc
     chown nfc nfc /dev/sec-nfc
-# Permissions for S.LSI ESE
-    chmod 0660 /dev/p3
-    chown system system /dev/p3
-    
-    # NFC
-    mkdir /data/nfc 0700 nfc nfc
-    mkdir /data/nfc/param 0700 nfc nfc
-    mkdir /data/bcmnfc 0700 nfc nfc
-    mkdir /data/bcmnfc/param 0700 nfc nfc
 
-    # Samsung Pay
-    # mkdir /efs/pfw_data 0760 spay spay
-
-    # MST/NFC Switch
-    # chown spay system /dev/mst_ctrl
-    chmod 0660 /dev/mst_ctrl
-
+# NFC : EFS section for NFC Resonant Frequency
+    mkdir /efs/sec_efs/nfc 0700 nfc nfc
 
 # Permission for Mobicore
     chown radio system /dev/mobicore-user
