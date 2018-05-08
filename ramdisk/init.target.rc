@@ -285,33 +285,27 @@ on boot
 # Permission for Wifi firmware_path
     chown wifi wifi /sys/module/dhd/parameters/firmware_path
 
-# NFC
+# Permissions for System LSI NFC
+# NFC : Permissions for NFC
+    chmod 0660 /dev/sec-nfc
+    chown nfc nfc /dev/sec-nfc
+# Permissions for S.LSI ESE
+    chmod 0660 /dev/p3
+    chown system system /dev/p3
+    
+    # NFC
     mkdir /data/nfc 0700 nfc nfc
     mkdir /data/nfc/param 0700 nfc nfc
     mkdir /data/bcmnfc 0700 nfc nfc
     mkdir /data/bcmnfc/param 0700 nfc nfc
 
     # Samsung Pay
-    mkdir /efs/pfw_data 0760 spay spay
+    # mkdir /efs/pfw_data 0760 spay spay
 
     # MST/NFC Switch
-    chown spay system /dev/mst_ctrl
+    # chown spay system /dev/mst_ctrl
     chmod 0660 /dev/mst_ctrl
 
-# NFC_NXP
-    setprop ro.nfc.port "I2C"
-    chmod 0660 /dev/pn547
-    chown nfc nfc /dev/pn547
-    chown nfc /dev/pn547
-    chgrp nfc /dev/pn547
-
-    # NFC_BROADCOM
-    chmod 0600 /dev/bcm2079x
-    chown nfc nfc /dev/bcm2079x
-
-    # NFC_SLSI
-    chmod 0660 /dev/sec-nfc
-    chown nfc nfc /dev/sec-nfc
 
 # Permission for Mobicore
     chown radio system /dev/mobicore-user
