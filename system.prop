@@ -28,7 +28,7 @@ ro.ril.force_eri_from_xml=true
 ro.sys.sdcardfs=false
 
 # Nfc
-ro.nfc.port=I2C
+ro.nfc.port="I2C"
 ro.nfc.sec_hal=true
 
 # Wifi
