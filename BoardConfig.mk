@@ -39,3 +39,7 @@ DEVICE_MANIFEST_FILE := device/samsung/j5y17lte/manifest.xml
 
 # Inherit from the proprietary version
 -include vendor/samsung/j5y17lte/BoardConfigVendor.mk
+
+# Skip DEX2OAT
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
+WITH_DEXPREOPT := false
