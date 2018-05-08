@@ -37,7 +37,10 @@ net.tethering.noprovisioning=true
 # Audio
 audio_hal.disable_two_mic=false
 
-#ADB
+# Disable lockscreen rotation
+lockscreen.rot_override=false 
+
+# ADB
 persist.adb.notify=0
 persist.service.adb.enable=1
 persist.service.debuggable=1
