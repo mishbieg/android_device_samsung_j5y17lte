@@ -20,11 +20,11 @@ $(call inherit-product, device/samsung/j5y17lte/device.mk)
 # Inherit from those products. Most specific first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DU stuff
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := lineage_j5y17lte
+PRODUCT_NAME := du_j5y17lte
 PRODUCT_DEVICE := j5y17lte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
