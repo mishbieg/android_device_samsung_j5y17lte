@@ -29,7 +29,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 # Hwui Memory
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
-
 # Inherit from Exynos7870-common
 $(call inherit-product, device/samsung/exynos7870-common/device-common.mk)
 
