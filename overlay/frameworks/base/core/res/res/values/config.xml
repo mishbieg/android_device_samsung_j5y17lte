@@ -73,6 +73,8 @@
     <!--Whether the display blanks itself when transition from a doze to a non-doze sate -->
    <bool name="config_displayBlanksAfterDoze">true</bool>
 
+	<!-- If true, the display will be shifted around in ambient mode. -->
+	<bool name="config_enableBurnInProtection">true</bool>
 
     <!-- Control whether Night display is available. This should only be enabled on devices
          that have a HWC implementation that can apply the matrix passed to setColorTransform
