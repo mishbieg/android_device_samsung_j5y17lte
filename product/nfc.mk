@@ -25,8 +25,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl \
-    libnfc-nci \
-    libnfc_nci_jni \
     com.android.nfc_extras \
     NfcNci \
     Tag
