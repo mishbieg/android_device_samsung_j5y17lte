@@ -1,2 +1,2 @@
-add_lunch_combo dot_j5y17lte-userdebug
-add_lunch_combo dot_j5y17lte-eng
+add_lunch_combo aosip_j5y17lte-userdebug
+add_lunch_combo aosip_j5y17lte-eng
