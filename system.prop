@@ -40,5 +40,3 @@ persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 #Enable ADB Debugging By Default & Disable USB Debugging
 
-# Disable lockscreen rotation
-lockscreen.rot_override=false 
