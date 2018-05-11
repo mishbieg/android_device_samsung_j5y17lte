@@ -75,6 +75,10 @@ lib/libbauthtzcommon.so
 lib/libegis_fp_normal_sensor_test.so
 lib/libsynaFpSensorTestNwd.so
 
+# Graphics
+lib/egl/egl.cfg
+lib/egl/libGLES_android.so
+
 # GPS
 bin/gpsd
 etc/ca.pem
