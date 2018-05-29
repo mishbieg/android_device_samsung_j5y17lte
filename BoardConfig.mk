@@ -16,6 +16,8 @@
 
 TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17lteub
 
+TARGET_NEEDS_GCC_LIBC := true
+
 # Inherit from Exynos7870-common
 include device/samsung/exynos7870-common/BoardConfigCommon.mk
 
