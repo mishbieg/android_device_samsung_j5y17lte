@@ -1,5 +1,7 @@
 on boot
 
+write /sys/class/input_booster/level 0
+
 # NFC
     mkdir /data/nfc 0700 nfc nfc
     mkdir /data/nfc/param 0700 nfc nfc
