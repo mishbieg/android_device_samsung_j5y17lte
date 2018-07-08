@@ -23,23 +23,35 @@ LOCAL_PATH := device/samsung/j5y17lte
 TARGET_COPY_OUT_VENDOR := system/vendor
 
 # inherit the splitted configs
--include $(LOCAL_PATH)/board/*.mk
+-include device/samsung/j5y17lte/board/*.mk
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_sec
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/samsung/j5y17lte/sepolicy
+BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 
 # Properties
 TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
 
 # Hidl
-DEVICE_MANIFEST_FILE := device/samsung/j5y17lte/manifest.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 
 # Inherit from the proprietary version
 -include vendor/samsung/j5y17lte/BoardConfigVendor.mk
 
-# Skip DEX2OAT
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
-WITH_DEXPREOPT := false
+# Lights
+PRODUCT_PACKAGES += \
+    lights.universal7870 \
+    android.hardware.light@2.0-impl
+
+# AEX config
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true

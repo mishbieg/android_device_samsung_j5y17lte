@@ -21,7 +21,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 
 # include splitted configs
--include $(LOCAL_PATH)/product/*.mk
+-include device/samsung/j5y17lte/product/*.mk
 
 # Dalvik Heap
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)

@@ -15,6 +15,7 @@
 #
 
 # Inherit device configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/samsung/j5y17lte/device.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
