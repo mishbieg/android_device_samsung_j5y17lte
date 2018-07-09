@@ -24,6 +24,9 @@ ro.ril.force_eri_from_xml=true
 # sdcardfs
 ro.sys.sdcardfs=false
 
+# ro.product.first_api_level indicates the first api level the device has commercially launched on.
+ro.product.first_api_level=23
+
 # Nfc
 ro.nfc.port="I2C"
 ro.nfc.sec_hal=true
