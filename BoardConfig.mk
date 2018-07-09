@@ -40,11 +40,6 @@ DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 # Inherit from the proprietary version
 -include vendor/samsung/j5y17lte/BoardConfigVendor.mk
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.universal7870 \
-    android.hardware.light@2.0-impl
-
 # AEX config
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
