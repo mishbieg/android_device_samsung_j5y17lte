@@ -29,3 +29,6 @@ PRODUCT_DEVICE := j5y17lte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Unofficial build ID
+TARGET_UNOFFICIAL_BUILD_ID := mishbieg
